@@ -1,0 +1,15 @@
+2026-03-14 13:10:36 | DEBUG    | chatbot | 管理员使用系统 API 配置
+2026-03-14 13:10:36 | INFO     | chatbot | 聊天机器人初始化完成，用户：admin, 当前模型：qwen3.5-plus
+2026-03-14 13:10:44 | DEBUG    | chatbot | 管理员使用系统 API 配置
+2026-03-14 13:10:44 | INFO     | chatbot | 聊天机器人初始化完成，用户：admin, 当前模型：qwen3.5-plus
+2026-03-14 13:10:44 | DEBUG    | chatbot | 使用系统 API 配置（共享模型：qwen3.5-plus）
+2026-03-14 13:10:44 | INFO     | chatbot | 聊天机器人初始化完成，用户：testuser, 当前模型：qwen3.5-plus
+2026-03-14 13:16:44 | DEBUG    | chatbot | 管理员使用系统 API 配置
+2026-03-14 13:16:44 | INFO     | chatbot | 聊天机器人初始化完成，用户：admin, 当前模型：qwen3.5-plus
+2026-03-14 13:16:44 | DEBUG    | chatbot | 使用系统 API 配置（共享模型：qwen3.5-plus）
+2026-03-14 13:16:44 | INFO     | chatbot | 聊天机器人初始化完成，用户：testuser, 当前模型：qwen3.5-plus
+2026-03-14 13:17:33 | DEBUG    | chatbot | 管理员使用系统 API 配置
+2026-03-14 13:17:33 | INFO     | chatbot | 聊天机器人初始化完成，用户：admin, 当前模型：qwen3.5-plus
+2026-03-14 13:17:46 | DEBUG    | chatbot | 管理员使用系统 API 配置
+2026-03-14 13:17:46 | DEBUG    | chatbot | 用户 admin 输入：你好...
+2026-03-14 13:17:56 | INFO     | chatbot | 用户 admin 收到 AI 响应：你好！很高兴继续为你服务。请问有什么问题或者需要协助的地方吗？...

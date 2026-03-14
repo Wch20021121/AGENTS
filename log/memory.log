@@ -1,0 +1,15 @@
+2026-03-14 13:10:36 | INFO     | memory | 用户 admin 加载了 8 条对话记录
+2026-03-14 13:10:36 | DEBUG    | memory | 记忆模块初始化完成，用户：admin, 文件：AI\memory\data\admin\chat_history.md, 最大消息数：20
+2026-03-14 13:10:44 | INFO     | memory | 用户 admin 加载了 8 条对话记录
+2026-03-14 13:10:44 | DEBUG    | memory | 记忆模块初始化完成，用户：admin, 文件：AI\memory\data\admin\chat_history.md, 最大消息数：20
+2026-03-14 13:10:44 | DEBUG    | memory | 历史文件不存在，创建新对话
+2026-03-14 13:10:44 | DEBUG    | memory | 记忆模块初始化完成，用户：testuser, 文件：AI\memory\data\testuser\chat_history.md, 最大消息数：20
+2026-03-14 13:16:44 | INFO     | memory | 用户 admin 加载了 8 条对话记录
+2026-03-14 13:16:44 | DEBUG    | memory | 记忆模块初始化完成，用户：admin, 文件：AI\memory\data\admin\chat_history.md, 最大消息数：20
+2026-03-14 13:16:44 | DEBUG    | memory | 历史文件不存在，创建新对话
+2026-03-14 13:16:44 | DEBUG    | memory | 记忆模块初始化完成，用户：testuser, 文件：AI\memory\data\testuser\chat_history.md, 最大消息数：20
+2026-03-14 13:17:33 | INFO     | memory | 用户 admin 加载了 8 条对话记录
+2026-03-14 13:17:33 | DEBUG    | memory | 记忆模块初始化完成，用户：admin, 文件：AI\memory\data\admin\chat_history.md, 最大消息数：20
+2026-03-14 13:17:46 | DEBUG    | memory | 用户 admin 添加 user 消息，当前消息总数：18
+2026-03-14 13:17:56 | DEBUG    | memory | 用户 admin 追加保存了 1 条对话记录到 AI\memory\data\admin\chat_history.md
+2026-03-14 13:17:56 | DEBUG    | memory | 用户 admin 添加 assistant 消息，当前消息总数：19

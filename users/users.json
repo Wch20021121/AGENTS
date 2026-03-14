@@ -1,0 +1,9 @@
+{
+  "testuser": {
+    "username": "testuser",
+    "password_hash": "7e6e0c3079a08c5cc6036789b57e951f65f82383913ba1a49ae992544f1b4b6e",
+    "can_use_shared_models": true,
+    "can_use_personal_models": true,
+    "created_at": "2026-03-14T13:10:44.115796"
+  }
+}

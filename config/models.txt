@@ -1,9 +1,0 @@
-id,provider,description
-qwen3.5-plus,qwen3.5-plus,文本生成、深度思考、视觉理解
-qwen3-max-2026-01-23,通义千问,文本生成、深度思考
-qwen3-coder-next,通义千问,文本生成
-qwen3-coder-plus,通义千问,文本生成
-glm-5,智谱,文本生成、深度思考
-glm-4.7,智谱,文本生成、深度思考
-kimi-k2.5,智谱,文本生成、深度思考、视觉理解
-MiniMax-M2.5,MiniMax,文本生成、深度思考
