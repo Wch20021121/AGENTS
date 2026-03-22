@@ -1,0 +1,6 @@
+{
+  "log_level": "INFO",
+  "log_file": "logs/app.log",
+  "session_dir": "sessions",
+  "max_history": 100
+}

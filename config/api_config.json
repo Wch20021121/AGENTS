@@ -1,0 +1,9 @@
+{
+  "default": "dashscope",
+  "providers": {
+    "dashscope": {
+      "base_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "api_key": "sk-sp-54c25972d5c6486aabb0d37e54382b90"
+    }
+  }
+}
