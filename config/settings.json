@@ -1,6 +1,41 @@
 {
-  "log_level": "INFO",
-  "log_file": "logs/app.log",
-  "session_dir": "sessions",
-  "max_history": 100
+    "model": {
+        "base_url": "https://coding.dashscope.aliyuncs.com/v1",
+        "api_key": "sk-sp-54c25972d5c6486aabb0d37e54382b90",
+        "model_name": "glm-5",
+        "max_tokens": 2000,
+        "temperature": 0.7
+    },
+    "security": {
+        "allow_command": false,
+        "command_timeout": 60,
+        "dangerous_commands": [
+            "rm -rf /",
+            "rm -rf /*",
+            "rm -rf ~",
+            "format",
+            "mkfs",
+            "dd if=/dev/zero",
+            "> /dev/sda",
+            "mv / /dev/null",
+            ":(){ :|:& };:",
+            "fork bomb",
+            "del /f /s /q",
+            "rd /s /q",
+            "powershell -enc",
+            "powershell -e ",
+            "sudo rm",
+            "chmod 777 /"
+        ],
+        "allowed_commands": []
+    },
+    "system": {
+        "work_dir": ".",
+        "log_level": "INFO",
+        "log_file": "logs/app.log",
+        "session_dir": "sessions",
+        "max_history": 100,
+        "max_iterations": 10,
+        "debug_mode": false
+    }
 }

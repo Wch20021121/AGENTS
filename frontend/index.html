@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniAgent - 智能助手</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
+        .app { display: flex; height: 100vh; }
+        .sidebar { width: 260px; background: #2c3e50; color: #fff; display: flex; flex-direction: column; }
+        .sidebar-header { padding: 20px; border-bottom: 1px solid #34495e; }
+        .sidebar-header h1 { font-size: 18px; margin-bottom: 5px; }
+        .sidebar-header p { font-size: 12px; color: #7f8c8d; }
+        .sidebar-nav { flex: 1; overflow-y: auto; }
+        .nav-section { padding: 10px 20px; }
+        .nav-section h3 { font-size: 12px; color: #7f8c8d; margin-bottom: 10px; text-transform: uppercase; }
+        .nav-item { padding: 8px 12px; border-radius: 6px; cursor: pointer; margin-bottom: 4px; transition: background 0.2s; }
+        .nav-item:hover { background: #34495e; }
+        .nav-item.active { background: #3498db; }
+        .main-content { flex: 1; display: flex; flex-direction: column; background: #fff; }
+        .header { padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .header-title { font-size: 16px; }
+        .header-actions { display: flex; gap: 10px; }
+        .btn { padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+        .btn-primary { background: #3498db; color: #fff; }
+        .btn-secondary { background: #ecf0f1; color: #2c3e50; }
+        .btn:hover { opacity: 0.9; }
+        .chat-area { flex: 1; overflow-y: auto; padding: 20px; }
+        .message { margin-bottom: 15px; display: flex; }
+        .message.user { justify-content: flex-end; }
+        .message-content { max-width: 70%; padding: 12px 16px; border-radius: 12px; }
+        .message.user .message-content { background: #3498db; color: #fff; }
+        .message.assistant .message-content { background: #f0f0f0; color: #2c3e50; }
+        .tool-call { background: #fff3cd; border: 1px solid #ffc107; padding: 10px 14px; border-radius: 8px; margin: 8px 0; font-size: 13px; }
+        .tool-call-header { font-weight: bold; color: #856404; }
+        .tool-result { background: #d4edda; border: 1px solid #28a745; padding: 8px 12px; border-radius: 6px; margin-top: 8px; font-size: 12px; }
+        .input-area { padding: 15px 20px; border-top: 1px solid #eee; display: flex; gap: 10px; }
+        .input-box { flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; resize: none; min-height: 40px; max-height: 120px; }
+        .input-box:focus { outline: none; border-color: #3498db; }
+        .send-btn { padding: 12px 24px; }
+        .status-bar { padding: 8px 20px; background: #f8f9fa; border-top: 1px solid #eee; font-size: 12px; color: #6c757d; display: flex; justify-content: space-between; }
+        .settings-panel { padding: 20px; }
+        .settings-group { margin-bottom: 20px; }
+        .settings-group h3 { font-size: 14px; margin-bottom: 10px; color: #2c3e50; }
+        .settings-item { margin-bottom: 12px; }
+        .settings-item label { display: block; font-size: 12px; color: #7f8c8d; margin-bottom: 4px; }
+        .settings-item input, .settings-item select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+        .settings-item input:focus, .settings-item select:focus { outline: none; border-color: #3498db; }
+        .tools-list { padding: 20px; }
+        .tool-item { background: #f8f9fa; padding: 12px 16px; border-radius: 8px; margin-bottom: 10px; }
+        .tool-item h4 { font-size: 14px; color: #2c3e50; }
+        .tool-item p { font-size: 12px; color: #7f8c8d; margin-top: 4px; }
+        .tool-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; }
+        .badge-read { background: #d4edda; color: #155724; }
+        .badge-write { background: #fff3cd; color: #856404; }
+        .badge-delete { background: #f8d7da; color: #721c24; }
+        .badge-execute { background: #cce5ff; color: #004085; }
+        .hidden { display: none; }
+        .loading { text-align: center; padding: 20px; color: #7f8c8d; }
+        .session-list { padding: 10px; }
+        .session-item { padding: 10px 14px; background: #f8f9fa; border-radius: 6px; margin-bottom: 8px; cursor: pointer; }
+        .session-item:hover { background: #e9ecef; }
+        .session-item h4 { font-size: 13px; color: #2c3e50; }
+        .session-item p { font-size: 11px; color: #7f8c8d; margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>MiniAgent</h1>
+                <p>智能文件操作助手</p>
+            </div>
+            <div class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>功能</h3>
+                    <div class="nav-item active" onclick="showPanel('chat')">聊天</div>
+                    <div class="nav-item" onclick="showPanel('tools')">工具列表</div>
+                    <div class="nav-item" onclick="showPanel('sessions')">历史会话</div>
+                    <div class="nav-item" onclick="showPanel('settings')">设置</div>
+                </div>
+                <div class="nav-section">
+                    <h3>命令</h3>
+                    <div class="nav-item" onclick="sendCommand('/help')">/help</div>
+                    <div class="nav-item" onclick="sendCommand('/skills')">/skills</div>
+                    <div class="nav-item" onclick="sendCommand('/status')">/status</div>
+                    <div class="nav-item" onclick="sendCommand('/clear')">/clear</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="header-title">MiniAgent 对话</div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" onclick="newSession()">新建会话</button>
+                </div>
+            </div>
+            <div id="chat-panel" class="chat-area">
+                <div class="loading">正在连接...</div>
+            </div>
+            <div id="tools-panel" class="tools-list hidden"></div>
+            <div id="sessions-panel" class="session-list hidden"></div>
+            <div id="settings-panel" class="settings-panel hidden"></div>
+            <div class="input-area">
+                <textarea class="input-box" id="input" placeholder="输入消息或命令 (/help 查看帮助)" rows="1"></textarea>
+                <button class="btn btn-primary send-btn" onclick="sendMessage()">发送</button>
+            </div>
+            <div class="status-bar">
+                <span id="status-text">状态: 未连接</span>
+                <span id="session-text">会话: 无</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const API_BASE = 'http://localhost:5000';
+        let currentSessionId = null;
+        let messages = [];
+        
+        async function init() {
+            await loadStatus();
+            await newSession();
+        }
+        
+        async function loadStatus() {
+            try {
+                const res = await fetch(`${API_BASE}/status`);
+                const data = await res.json();
+                document.getElementById('status-text').textContent = 
+                    `状态: ${data.model_connected ? '已连接' : '未连接'} | 工具: ${data.tools_count}`;
+                document.getElementById('session-text').textContent = 
+                    `工作目录: ${data.work_dir}`;
+            } catch (e) {
+                document.getElementById('status-text').textContent = '状态: 连接失败';
+            }
+        }
+        
+        async function newSession() {
+            try {
+                const res = await fetch(`${API_BASE}/sessions`, { method: 'POST' });
+                const data = await res.json();
+                currentSessionId = data.session_id;
+                messages = [];
+                document.getElementById('session-text').textContent = `会话: ${currentSessionId}`;
+                renderMessages();
+            } catch (e) {
+                console.error('创建会话失败:', e);
+            }
+        }
+        
+        async function sendMessage() {
+            const input = document.getElementById('input');
+            const text = input.value.trim();
+            if (!text) return;
+            input.value = '';
+            
+            messages.push({ role: 'user', content: text });
+            renderMessages();
+            
+            try {
+                const res = await fetch(`${API_BASE}/chat`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                const data = await res.json();
+                
+                if (data.type === 'command_result') {
+                    messages.push({ role: 'assistant', content: data.message, isCommand: true });
+                } else {
+                    let content = data.response;
+                    if (data.tool_calls && data.tool_calls.length > 0) {
+                        content += '\n\n工具调用:';
+                        for (const tc of data.tool_calls) {
+                            content += `\n- ${tc.tool}: ${tc.result.success ? '成功' : '失败'}`;
+                            if (tc.result.message) content += ` - ${tc.result.message}`;
+                        }
+                    }
+                    messages.push({ role: 'assistant', content: content, tool_calls: data.tool_calls });
+                }
+                currentSessionId = data.session_id;
+                renderMessages();
+            } catch (e) {
+                messages.push({ role: 'assistant', content: '发送失败: ' + e.message });
+                renderMessages();
+            }
+        }
+        
+        function sendCommand(cmd) {
+            document.getElementById('input').value = cmd;
+            sendMessage();
+        }
+        
+        function renderMessages() {
+            const chatArea = document.getElementById('chat-panel');
+            chatArea.innerHTML = '';
+            
+            for (const msg of messages) {
+                const div = document.createElement('div');
+                div.className = `message ${msg.role}`;
+                
+                const content = document.createElement('div');
+                content.className = 'message-content';
+                
+                if (msg.tool_calls) {
+                    content.innerHTML = `<div>${escapeHtml(msg.content.split('\n\n工具调用:')[0])}</div>`;
+                    for (const tc of msg.tool_calls) {
+                        const toolDiv = document.createElement('div');
+                        toolDiv.className = 'tool-call';
+                        toolDiv.innerHTML = `
+                            <div class="tool-call-header">${tc.tool}</div>
+                            <div class="tool-result">${tc.result.success ? '✅' : '❌'} ${escapeHtml(tc.result.message || tc.result.error)}</div>
+                        `;
+                        content.appendChild(toolDiv);
+                    }
+                } else {
+                    content.innerHTML = escapeHtml(msg.content).replace(/\n/g, '<br>');
+                }
+                
+                div.appendChild(content);
+                chatArea.appendChild(div);
+            }
+            
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        async function showPanel(name) {
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('chat-panel').classList.add('hidden');
+            document.getElementById('tools-panel').classList.add('hidden');
+            document.getElementById('sessions-panel').classList.add('hidden');
+            document.getElementById('settings-panel').classList.add('hidden');
+            document.getElementById(`${name}-panel`).classList.remove('hidden');
+            
+            if (name === 'tools') await loadTools();
+            if (name === 'sessions') await loadSessions();
+            if (name === 'settings') await loadSettings();
+        }
+        
+        async function loadTools() {
+            const res = await fetch(`${API_BASE}/tools`);
+            const data = await res.json();
+            const panel = document.getElementById('tools-panel');
+            panel.innerHTML = '';
+            
+            for (const tool of data.tools) {
+                const div = document.createElement('div');
+                div.className = 'tool-item';
+                const badgeClass = `badge-${tool.permission_type}`;
+                div.innerHTML = `
+                    <h4>${tool.name} <span class="tool-badge ${badgeClass}">${tool.permission_type}</span></h4>
+                    <p>${tool.description}</p>
+                `;
+                panel.appendChild(div);
+            }
+        }
+        
+        async function loadSessions() {
+            const res = await fetch(`${API_BASE}/sessions`);
+            const data = await res.json();
+            const panel = document.getElementById('sessions-panel');
+            panel.innerHTML = '';
+            
+            for (const session of data.sessions) {
+                const div = document.createElement('div');
+                div.className = 'session-item';
+                div.onclick = () => loadSession(session.id);
+                div.innerHTML = `
+                    <h4>${session.id}</h4>
+                    <p>消息: ${session.message_count} | 工具调用: ${session.tool_call_count}</p>
+                `;
+                panel.appendChild(div);
+            }
+        }
+        
+        async function loadSession(id) {
+            const res = await fetch(`${API_BASE}/sessions/${id}`);
+            const data = await res.json();
+            currentSessionId = data.id;
+            messages = data.messages || [];
+            document.getElementById('session-text').textContent = `会话: ${currentSessionId}`;
+            showPanel('chat');
+            renderMessages();
+        }
+        
+        async function loadSettings() {
+            const res = await fetch(`${API_BASE}/config`);
+            const data = await res.json();
+            const panel = document.getElementById('settings-panel');
+            panel.innerHTML = `
+                <div class="settings-group">
+                    <h3>模型配置</h3>
+                    <div class="settings-item">
+                        <label>API地址</label>
+                        <input id="model-base-url" value="${data.model.base_url}">
+                    </div>
+                    <div class="settings-item">
+                        <label>API Key</label>
+                        <input id="model-api-key" type="password" value="${data.model.api_key}">
+                    </div>
+                    <div class="settings-item">
+                        <label>模型名称</label>
+                        <input id="model-name" value="${data.model.model_name}">
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3>安全配置</h3>
+                    <div class="settings-item">
+                        <label>允许命令执行</label>
+                        <select id="allow-command">
+                            <option value="true" ${data.security.allow_command ? 'selected' : ''}>开启</option>
+                            <option value="false" ${!data.security.allow_command ? 'selected' : ''}>关闭</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3>系统配置</h3>
+                    <div class="settings-item">
+                        <label>工作目录</label>
+                        <input id="work-dir" value="${data.system.work_dir}">
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="saveSettings()">保存配置</button>
+            `;
+        }
+        
+        async function saveSettings() {
+            const modelUpdates = {
+                base_url: document.getElementById('model-base-url').value,
+                api_key: document.getElementById('model-api-key').value,
+                model_name: document.getElementById('model-name').value
+            };
+            const securityUpdates = {
+                allow_command: document.getElementById('allow-command').value === 'true'
+            };
+            const systemUpdates = {
+                work_dir: document.getElementById('work-dir').value
+            };
+            
+            await fetch(`${API_BASE}/config`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ section: 'model', updates: modelUpdates })
+            });
+            await fetch(`${API_BASE}/config`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ section: 'security', updates: securityUpdates })
+            });
+            await fetch(`${API_BASE}/config`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ section: 'system', updates: systemUpdates })
+            });
+            
+            alert('配置已保存');
+            loadStatus();
+        }
+        
+        document.getElementById('input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        
+        init();
+    </script>
+</body>
+</html>

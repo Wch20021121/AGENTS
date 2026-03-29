@@ -1,0 +1,271 @@
+2026-03-29 02:02:09,675 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 02:02:09,675 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 02:02:09,675 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 02:02:09,675 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 02:02:09,675 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 02:02:15,266 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 02:02:15,266 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 02:02:15,266 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 02:02:15,266 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 02:02:15,275 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 02:02:15,294 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 02:02:15,294 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 02:02:39,129 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 02:02:39,130 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 02:02:39,130 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 02:02:39,130 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 02:02:39,130 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 02:02:39,145 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 02:02:39,145 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 02:03:08,231 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 02:03:08] "GET /status HTTP/1.1" 200 -
+2026-03-29 02:04:00,965 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 02:04:00] "GET /tools HTTP/1.1" 200 -
+2026-03-29 02:04:00,965 - backend.storage.session - INFO - Created session: 20260329_020400
+2026-03-29 02:04:00,965 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 02:04:00] "POST /sessions HTTP/1.1" 200 -
+2026-03-29 02:04:00,994 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 02:04:00] "POST /chat HTTP/1.1" 200 -
+2026-03-29 16:49:35,087 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 16:49:35,087 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 16:49:35,087 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 16:49:35,087 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 16:49:35,087 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 16:49:35,101 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 16:49:35,102 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 16:50:24,680 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:24] "GET /status HTTP/1.1" 200 -
+2026-03-29 16:50:24,685 - backend.storage.session - INFO - Created session: 20260329_165024
+2026-03-29 16:50:24,685 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:24] "POST /sessions HTTP/1.1" 200 -
+2026-03-29 16:50:25,794 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:25] "GET /tools HTTP/1.1" 200 -
+2026-03-29 16:50:26,610 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:26] "GET /sessions HTTP/1.1" 200 -
+2026-03-29 16:50:37,669 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:37] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-29 16:50:40,129 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:40] "GET /tools HTTP/1.1" 200 -
+2026-03-29 16:50:40,966 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:40] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-29 16:50:44,733 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:44] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-29 16:50:47,841 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:47] "GET /tools HTTP/1.1" 200 -
+2026-03-29 16:50:48,109 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:48] "GET /tools HTTP/1.1" 200 -
+2026-03-29 16:50:48,151 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:50:48] "GET /tools HTTP/1.1" 200 -
+2026-03-29 16:52:32,512 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 16:52:32,512 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 16:52:32,513 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 16:52:32,513 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 16:52:32,513 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 16:52:32,529 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 16:52:32,529 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 16:52:44,858 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:52:44] "GET /status HTTP/1.1" 200 -
+2026-03-29 16:55:31,749 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 16:55:31,750 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 16:55:31,750 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 16:55:31,750 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 16:55:31,750 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 16:55:31,764 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 16:55:31,764 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 16:55:33,669 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:55:33] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 16:55:33,730 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:55:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 16:56:48,727 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 16:56:48,727 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 16:56:48,727 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 16:56:48,727 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 16:56:48,727 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 16:56:48,742 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 16:56:48,742 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 16:56:50,636 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:56:50] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 16:57:18,041 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 16:57:18,041 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 16:57:18,041 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 16:57:18,041 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 16:57:18,041 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 16:57:18,055 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 16:57:18,055 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 16:57:19,642 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:57:19] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 16:58:09,179 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 16:58:09,179 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 16:58:09,179 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 16:58:09,179 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 16:58:09,179 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 16:58:09,193 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 16:58:09,193 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 16:58:11,076 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 16:58:11] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:00:14,967 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:00:14,967 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:00:14,967 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:00:14,967 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:00:14,967 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:00:14,983 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:00:14,984 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:00:16,919 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:00:16] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:02:36,745 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:02:36] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:02:51,366 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:02:51] "GET /status HTTP/1.1" 200 -
+2026-03-29 17:03:02,155 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:03:02,155 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:03:02,155 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:03:02,155 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:03:02,155 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:03:02,172 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:03:02,172 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:03:04,076 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:03:04] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:03:27,880 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:03:27] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:03:50,560 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:03:50,561 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:03:50,561 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:03:50,561 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:03:50,561 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:03:50,577 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:03:50,577 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:03:52,543 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:03:52] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:03:52,615 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:03:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 17:04:08,995 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:04:08] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:04:56,216 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:04:56,216 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:04:56,216 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:04:56,216 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:04:56,216 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:04:56,233 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:04:56,233 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:04:58,125 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:04:58] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:05:18,207 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:05:18] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:05:30,328 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:05:30,328 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:05:30,328 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:05:30,328 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:05:30,328 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:05:30,345 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:05:30,345 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:05:31,934 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:05:31] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:05:52,193 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:05:52] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:07:02,873 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:07:02,873 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:07:02,873 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:07:02,873 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:07:02,873 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:07:02,896 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:07:02,896 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:07:04,798 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:07:04] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:07:16,394 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:07:16] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:07:48,140 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:07:48,140 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:07:48,141 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:07:48,141 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:07:48,141 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:07:48,154 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.9:5001
+2026-03-29 17:07:48,154 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:07:49,731 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:07:49] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:08:15,424 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:08:15] "GET /status HTTP/1.1" 200 -
+2026-03-29 17:08:43,853 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 17:08:43,854 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 17:08:43,854 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 17:08:43,854 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 17:08:43,854 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 17:08:43,867 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 17:08:43,867 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 17:08:45,747 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:08:45] "GET / HTTP/1.1" 200 -
+2026-03-29 17:08:46,047 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:08:46] "GET /status HTTP/1.1" 200 -
+2026-03-29 17:08:46,054 - backend.storage.session - INFO - Created session: 20260329_170846
+2026-03-29 17:08:46,055 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 17:08:46] "POST /sessions HTTP/1.1" 200 -
+2026-03-29 21:38:56,918 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 21:38:56,919 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 21:38:56,919 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 21:38:56,919 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 21:38:56,919 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 21:38:56,929 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 21:38:56,929 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:38:58,905 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:38:58] "GET / HTTP/1.1" 200 -
+2026-03-29 21:38:59,171 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:38:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 21:38:59,174 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:38:59] "GET /status HTTP/1.1" 200 -
+2026-03-29 21:38:59,488 - backend.storage.session - INFO - Created session: 20260329_213859
+2026-03-29 21:38:59,488 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:38:59] "POST /sessions HTTP/1.1" 200 -
+2026-03-29 21:39:01,964 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:39:01] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:39:07,248 - backend.core.ai_client - INFO - Request to https://coding.dashscope.aliyuncs.com/v1/chat/completions, model: qwen-turbo, tools: 5
+2026-03-29 21:39:07,531 - backend.core.ai_client - ERROR - API request failed: 401 Client Error: Unauthorized for url: https://coding.dashscope.aliyuncs.com/v1/chat/completions
+2026-03-29 21:39:07,537 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:39:07] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:40:38,541 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 21:40:38,541 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 21:40:38,541 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 21:40:38,541 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 21:40:38,541 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 21:40:38,554 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 21:40:38,555 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:40:40,575 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:40:40] "GET / HTTP/1.1" 200 -
+2026-03-29 21:40:40,828 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:40:40] "GET /status HTTP/1.1" 200 -
+2026-03-29 21:40:40,829 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:40:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 21:40:41,139 - backend.storage.session - INFO - Created session: 20260329_214041
+2026-03-29 21:40:41,139 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:40:41] "POST /sessions HTTP/1.1" 200 -
+2026-03-29 21:42:27,884 - backend.tools.registry - INFO - Registered tool: write_file
+2026-03-29 21:42:27,884 - backend.tools.registry - INFO - Registered tool: read_file
+2026-03-29 21:42:27,884 - backend.tools.registry - INFO - Registered tool: search_files
+2026-03-29 21:42:27,885 - backend.tools.registry - INFO - Registered tool: delete_file
+2026-03-29 21:42:27,885 - backend.tools.registry - INFO - Registered tool: run_command
+2026-03-29 21:42:27,896 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2026-03-29 21:42:27,896 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:42:29,814 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:29] "GET / HTTP/1.1" 200 -
+2026-03-29 21:42:30,079 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 21:42:30,094 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:30] "GET /status HTTP/1.1" 200 -
+2026-03-29 21:42:30,407 - backend.storage.session - INFO - Created session: 20260329_214230
+2026-03-29 21:42:30,407 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:30] "POST /sessions HTTP/1.1" 200 -
+2026-03-29 21:42:34,824 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:34] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:42:39,947 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:39] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:42:47,541 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:47] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:42:57,326 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:42:57] "GET /tools HTTP/1.1" 200 -
+2026-03-29 21:43:00,745 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:00] "GET /sessions HTTP/1.1" 200 -
+2026-03-29 21:43:02,428 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:02] "GET /config HTTP/1.1" 200 -
+2026-03-29 21:43:09,866 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:09] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:43:10,832 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:10] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:43:11,308 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:11] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:43:11,336 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:11] "POST /chat HTTP/1.1" 200 -
+2026-03-29 21:43:18,473 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:18] "GET /config HTTP/1.1" 200 -
+2026-03-29 21:43:18,737 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:18] "GET /sessions HTTP/1.1" 200 -
+2026-03-29 21:43:24,176 - backend.core.ai_client - INFO - Request to https://coding.dashscope.aliyuncs.com/v1/chat/completions, model: glm-5, tools: 5
+2026-03-29 21:43:27,324 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:43:27] "POST /chat HTTP/1.1" 200 -
